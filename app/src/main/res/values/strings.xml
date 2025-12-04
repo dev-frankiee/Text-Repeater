@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Text Repeater</string>
+
+    <string name="copy">copy</string>
+    <string name="repeat">repeat</string>
+    <string name="quantity">How many times?</string>
+    <string name="text">Enter text</string>
+    <string name="text_repeater">Text Repeater</string>
+    <string name="person_icon">person_icon</string>
+    <string name="login_head">Login</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="d_ont_have_an_account">D′ont have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="signup_icon">signup_icon</string>
+    <string name="signup">Signup</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="don_t_have_an_account">Don′t have an account?</string>
+    <string name="login_click">Login</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="repeat_anything_perfectly">Repeat anything. Perfectly.</string>
+    <string name="text_repeatertxt">Text Repeater</string>
+    <string name="repeat_icon">↺</string>
+</resources>
