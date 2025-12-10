@@ -37,10 +37,12 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/lock_icon"
+            android:elevation="30dp"
+            android:scaleType="centerInside"
             android:src="@drawable/password"
             app:tint="#8692f7"
-            android:scaleType="centerInside"
-            android:elevation="30dp"/>
+            tools:ignore="ImageContrastCheck" />
 
     </FrameLayout>
 
@@ -63,58 +65,60 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
-                android:textSize="36sp"
                 android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="@color/purple"/>
+                android:textColor="#448AFF"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:hintTextColor="#8692f7"
-                app:startIconTint="#8692f7"
-                app:startIconDrawable="@android:drawable/ic_dialog_email"
+            <EditText
                 android:id="@+id/loginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:autofillHints="emailAddress"
                 android:background="@drawable/custom_edittext"
+                android:drawableStart="@android:drawable/ic_dialog_email"
                 android:drawablePadding="8dp"
+                android:drawableTint="#8692f7"
                 android:hint="@string/username"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
-                android:drawableStart="@android:drawable/ic_dialog_email"/>
+                android:textColorHint="#5C6BC0"
+                app:hintTextColor="#8692f7"
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                tools:ignore="VisualLintTextFieldSize" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/loginPass"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
-                app:passwordToggleEnabled="true"
-                app:hintTextColor="#8692f7"
-                app:startIconTint="#8692f7"
-                app:passwordToggleTint="#8692f7"
-                app:startIconDrawable="@android:drawable/ic_lock_lock"
                 android:autofillHints="password"
                 android:background="@drawable/custom_edittext"
+                android:drawableStart="@android:drawable/ic_lock_lock"
                 android:drawablePadding="8dp"
+                android:drawableTint="#8692f7"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:padding="8dp"
-                android:drawableStart="@android:drawable/ic_lock_lock"/>
+                android:textColorHint="#5C6BC0"
+                app:passwordToggleEnabled="true"
+                tools:ignore="VisualLintTextFieldSize" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/matBut"
-                android:layout_marginTop="10dp"
                 android:layout_width="240dp"
                 android:layout_height="62dp"
-                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#8692f7"
                 android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="#0D47A1"
                 android:textSize="19sp"
                 android:textStyle="bold"
-                android:backgroundTint="#8692f7"
                 app:cornerRadius="20dp"
-                android:layout_marginBottom="20dp"/>
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <LinearLayout
                 android:id="@+id/sub"
@@ -135,8 +139,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sign_up"
-                    android:textSize="15sp"
-                    android:textColor="@color/purple"/>
+                    android:textColor="#5C6BC0"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 

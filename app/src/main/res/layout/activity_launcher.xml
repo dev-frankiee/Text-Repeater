@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0f0f1a">
+    android:background="#202042">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,14 +26,6 @@
                 android:background="@drawable/logo_background"
                 android:elevation="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/repeat_icon"
-                android:textColor="#FFFFFF"
-                android:textSize="64sp"
-                android:textStyle="bold" />
 
         </FrameLayout>
 

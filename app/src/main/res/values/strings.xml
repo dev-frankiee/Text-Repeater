@@ -24,4 +24,12 @@
     <string name="repeat_anything_perfectly">Repeat anything. Perfectly.</string>
     <string name="text_repeatertxt">Text Repeater</string>
     <string name="repeat_icon">↺</string>
+    <string name="custom_separator">custom separator</string>
+    <string name="add_new_line">Add New Line</string>
+    <string name="add_numbering">Add Numbering</string>
+    <string name="emoji_bomb_mode_random_emojis">Emoji Bomb Mode (Random Emojis)</string>
+    <string name="characters_0_lines_0">Characters: 0 | Lines: 0</string>
+    <string name="result">Result</string>
+    <string name="share">share</string>
+    <string name="lock_icon">lock icon</string>
 </resources>

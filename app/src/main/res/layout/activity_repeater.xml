@@ -8,11 +8,12 @@
     tools:context=".Repeater"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/light_purple">
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,14 +31,14 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/btn_purple"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/valueTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="8dp"
         android:autofillHints="value"
         android:hint="@string/text"
         android:minHeight="48dp"
@@ -51,7 +52,7 @@
         android:id="@+id/valueNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="8dp"
         android:autofillHints="value"
         android:hint="@string/quantity"
         android:inputType="number"
@@ -62,16 +63,19 @@
         tools:ignore="VisualLintTextFieldSize"/>
 
     <EditText
+        android:autofillHints="name"
+        android:inputType="text"
         android:id="@+id/etSeparator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="custom separator"
-        android:layout_marginVertical="16dp"
+        android:hint="@string/custom_separator"
+        android:layout_marginVertical="8dp"
         android:minHeight="48dp"
         android:background="@drawable/rounded_images"
         android:padding="20dp"
         android:textSize="16sp"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginBottom="15dp"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,9 +88,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add New Line"
+            android:textSize="15sp"
+            android:text="@string/add_new_line"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/btn_purple"
+            tools:ignore="VisualLintButtonSize" />
 
         <CheckBox
             android:id="@+id/cbNumbering"
@@ -94,19 +100,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
-            android:text="Add Numbering"
-            android:textColor="@color/white"/>
+            android:textSize="15sp"
+            android:text="@string/add_numbering"
+            android:textColor="@color/btn_purple"
+            tools:ignore="VisualLintButtonSize" />
 
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/cbEmojiBomb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Emoji Bomb Mode (Random Emojis)"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        <CheckBox
+            android:id="@+id/cbEmojiBomb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emoji_bomb_mode_random_emojis"
+            android:textColor="@color/btn_purple"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -119,11 +128,11 @@
             android:id="@+id/repeatBtn"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="@string/repeat"
             android:textSize="20sp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/deep_purple"/>
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_corner"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/copyBtn"
@@ -131,18 +140,18 @@
             android:layout_height="wrap_content"
             android:text="@string/copy"
             android:textSize="20sp"
-            android:padding="10dp"
-            android:backgroundTint="@color/deep_purple"
+            android:padding="5dp"
+            android:background="@drawable/btn_corner"
             />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/shareBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="share"
+            android:text="@string/share"
             android:gravity="center"
             app:icon="@android:drawable/ic_menu_share"
-            android:backgroundTint="@color/deep_purple"
+            android:background="@drawable/btn_corner"
             android:layout_marginStart="10dp"/>
 
     </LinearLayout>
@@ -150,30 +159,26 @@
     <TextView
         android:id="@+id/valueView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="210dp"
         android:background="@drawable/result"
         android:padding="20dp"
-        android:hint="Result"
-        android:layout_weight="1"
+        android:hint="@string/result"
         android:textColor="@color/black"
-        android:layout_marginVertical="15dp"
         android:paddingHorizontal="15dp"
         android:textSize="18sp"
-        android:maxLines="10"
         android:scrollbars="vertical"/>
+
 
     <TextView
         android:id="@+id/tvCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Characters: 0 | Lines: 0"
+        android:text="@string/characters_0_lines_0"
         android:textStyle="bold"
-        android:textColor="@android:color/white"
         android:textSize="20sp"/>
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>

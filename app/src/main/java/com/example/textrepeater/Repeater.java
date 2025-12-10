@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,6 +47,7 @@ public class Repeater extends AppCompatActivity {
         cbEmojiBomb = findViewById(R.id.cbEmojiBomb);
         tvCounter = findViewById(R.id.tvCounter);
         valueView = findViewById(R.id.valueView);
+        valueView.setMovementMethod(new ScrollingMovementMethod());
 
         // Repeat button
         repeatButton.setOnClickListener(view -> {
@@ -95,15 +97,7 @@ public class Repeater extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT, text);
-                intent.setPackage("com.whatsapp"); // WhatsApp
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Intent fallback = new Intent(Intent.ACTION_SEND);
-                    fallback.setType("text/plain");
-                    fallback.putExtra(Intent.EXTRA_TEXT, text);
-                    startActivity(Intent.createChooser(fallback, "Share via"));
-                }
+                startActivity(Intent.createChooser(intent, "Share via"));
             }
         });
     }
